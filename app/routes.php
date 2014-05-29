@@ -1,6 +1,6 @@
 <?php
 
-<<<<<<< HEAD
+
 
 Route::get('/',					['as' => 'login', 'uses' => 'UserController@getLogin']);
 Route::post('/admin', 			['as' => 'asignin', 'uses' => 'UserController@postLogin']); 
@@ -104,20 +104,4 @@ Route::group(['before' => 'auth'], function() {
 	Route::get('/logout',			['as'=>'logout','uses'=>'UserController@getLogout']);
 
 });
-=======
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
->>>>>>> fae01dbdbaf20d289f5c99ac9fc94a8540e9f109
