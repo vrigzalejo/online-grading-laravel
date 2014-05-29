@@ -13,7 +13,7 @@
 					{{ $error }}<br />
 			    @endforeach
 
-			     <a href="javascript:void(printSpecial())" id="print" class="btn"><i class="icon-print"></i></a>               
+			     <a href="javascript:void(printSpecial())" id="print"><button class="btn btn-large btn-info" type="button"><i class="glyphicon glyphicon-print"></i> Print</button></a><br /><br />                 
      			 <div id="printReady">   
 
 				@foreach($professors as $professor)
