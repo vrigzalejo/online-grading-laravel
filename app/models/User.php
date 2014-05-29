@@ -87,7 +87,6 @@ class User extends Basemodel implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
-<<<<<<< HEAD
 
 	public function admin() {
 		return $this->belongsTo('Admin');
@@ -105,6 +104,3 @@ class User extends Basemodel implements UserInterface, RemindableInterface {
 	];
 
 }
-=======
-}
->>>>>>> fae01dbdbaf20d289f5c99ac9fc94a8540e9f109
