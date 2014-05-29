@@ -14,7 +14,7 @@
           @endforeach
 
       
-      <a href="javascript:void(printSpecial())"><img src="{{ asset('img/print.png')}}" id='print'></a>              
+      <a href="javascript:void(printSpecial())" id="print" class="btn"><i class="icon-print"></i></a>               
       <div id="printReady">   
 
       <table class="table table-bordered table-hover">
