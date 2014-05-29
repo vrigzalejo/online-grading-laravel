@@ -15,7 +15,7 @@ class BaseController extends Controller {
 		}
 	}
 
-<<<<<<< HEAD
+
 	protected function getAllFromDb() {
 		$get_all_from_db = [
 			'users'			=> User::all(),
@@ -153,6 +153,3 @@ class BaseController extends Controller {
 
 	
 }
-=======
-}
->>>>>>> fae01dbdbaf20d289f5c99ac9fc94a8540e9f109
