@@ -7,7 +7,6 @@
 		"laravel/framework": "4.1.*",
 		"twitter/bootstrap": "*",
 		"twilio/sdk": "dev-master",
-		"gvlatko/laravel-xss": "dev-master",
 		"twilio/laratwilio": "dev-master"
 	},
 	"autoload": {

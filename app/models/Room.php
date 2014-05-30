@@ -5,7 +5,7 @@ class Room extends Basemodel {
 	public $timestamps = false;
 
 	public static $rules = [
-			'room'	=> 'required|between:3,16',
+			'room'	=> 'required|between:3,5',
 	];
 
 

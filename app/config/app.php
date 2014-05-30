@@ -119,7 +119,6 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Twilio\Laratwilio\LaratwilioServiceProvider',
-		'Gvlatko\LaravelXss\LaravelXssServiceProvider',
 	),
 
 	/*
@@ -186,7 +185,6 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Sms'			  => 'Twilio\Laratwilio\Facades\Laratwilio',	
-		'Xss'             => 'Gvlatko\LaravelXss\LaravelXssFacade',
 	),
 
 );

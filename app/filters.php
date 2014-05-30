@@ -19,7 +19,20 @@ App::before(function($request)
 
 App::after(function($request, $response)
 {
-	//
+	// Blank by default
+	// HTML Minification
+	if(App::Environment() != 'local') {
+		if($response instanceof Illuminate\Http\Response) {
+			$output = $response->getOriginalContent();
+			// Clean comments
+			$output = preg_replace('/<!--([^\[|(<!)].*)/', $output);
+			$output = preg_replace('/(?<!\S)\/\/\s*[^\r\n]*/', '', $output);
+			// Clean Whitespace
+			$output = preg_replace('/\s{2,}/', '', $output);
+			$output = preg_replace('/(\r?\n)/', '', $output);
+			$response->setContent($output);
+		}
+	}
 });
 
 /*
@@ -79,3 +92,4 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
