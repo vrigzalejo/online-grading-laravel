@@ -65,10 +65,14 @@
 	            		<td>{{{ $user->created_at }}}</td>
 	            		<td>{{{ $user->updated_at }}}</td>
 	            		<td>
+	            		@if($user->employee_id != '1234567' || $user->employee_id != '123456789')
 	            		{{ Form::open(['method'=> 'DELETE','route'=>['deleteuser', $user->id]]) }}
 	            		{{ Form::submit('Delete', ['class' => 'btn btn-danger', 'onclick'=>'return confirm("Are you sure?")']) }}
 	            		{{ Form::close() }}
-	            			</td>
+	            		@else
+	            		<button type="button" class="btn btn-danger" onclick="return alert('Fuck You! Don\'t delete this.)">Delete</button>
+	            		@endif	
+	            		</td>
 	            	</tr>
 	                @endforeach
                 @endif
