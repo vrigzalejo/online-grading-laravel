@@ -10,7 +10,7 @@
 	{{ Form::token() }}
 	<h2 class="form-signin-heading text-center">Users</h2>
     @foreach($errors->all() as $error)
-		<li>{{ $error }}</li>
+		<li>{{{ $error }}}</li>
     @endforeach
     
     <a href="#" id="show-create-form"><i class="glyphicon glyphicon-plus-sign"></i> Create User</a>
