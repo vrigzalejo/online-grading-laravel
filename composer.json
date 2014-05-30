@@ -7,7 +7,7 @@
 		"laravel/framework": "4.1.*",
 		"twitter/bootstrap": "*",
 		"twilio/sdk": "dev-master",
-		"twilio/laratwilio": "dev-master",
+		"twilio/laratwilio": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
