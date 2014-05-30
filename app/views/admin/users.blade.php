@@ -20,10 +20,10 @@
     	Employee ID: 
 		<select name="employee_id" class="selectpicker">
 			@foreach ($admins as $admin) 
-				<option value="{{ $admin->employee_id }}">{{ $admin->employee_id }}</option>
+				<option value="{{{ $admin->employee_id }}}">{{{ $admin->employee_id }}}</option>
 			@endforeach
 			@foreach ($professors as $professor) 
-				<option value="{{ $professor->employee_id }}">{{ $professor->employee_id }}</option>
+				<option value="{{{ $professor->employee_id }}}">{{{ $professor->employee_id }}}</option>
 			@endforeach
 		</select>
 
