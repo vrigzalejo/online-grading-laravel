@@ -96,9 +96,9 @@ public function __construct() {
 
 	public function updateCourse($id) {
 
-			$course_code = Input::get('course_code');
-			$course_collegecode = Input::get('course_collegecode');
-			$course_description = Input::get('course_description');
+			$course_code = Xss::clean(Input::get('course_code'));
+			$course_collegecode = Xss::clean(Input::get('course_collegecode'));
+			$course_description = Xss::clean(Input::get('course_description'));
 			$update_course = Course::find($id);
 			$update_course->code = $course_code;
 			$update_course->college_code = $course_collegecode;
@@ -109,7 +109,7 @@ public function __construct() {
 
 	public function updateRoom($id) {
 
-			$room_room = Input::get('room_room');
+			$room_room = Xss::clean(Input::get('room_room'));
 			$update_room = Room::find($id);
 			$update_room->room = $room_room;
 			$update_room->save();
@@ -118,7 +118,7 @@ public function __construct() {
 
 	public function updateYrSection($id) {
 
-			$yrsection_yrsection = Input::get('yrsection_yrsection');
+			$yrsection_yrsection = Xss::clean(Input::get('yrsection_yrsection'));
 			$update_yrsection = Yrsection::find($id);
 			$update_yrsection->yrsection = $yrsection_yrsection;
 			$update_yrsection->save();
@@ -127,8 +127,8 @@ public function __construct() {
 
 	public function updateSubject($id) {
 
-			$subject_code = Input::get('subject_code');
-			$subject_description = Input::get('subject_description');
+			$subject_code = Xss::clean(Input::get('subject_code'));
+			$subject_description = Xss::clean(Input::get('subject_description'));
 			$update_subject = Subject::find($id);
 			$update_subject->code = $subject_code;
 			$update_subject->description = $subject_description;
@@ -138,7 +138,7 @@ public function __construct() {
 
 	public function updateLock($id) {
 
-		$lock = Input::get('lock');
+		$lock = Xss::clean(Input::get('lock'));
 		$update_lock = Lock::find($id);
 		$update_lock->lock = $lock;
 		$update_lock->save();
@@ -147,14 +147,14 @@ public function __construct() {
 
 	public function updateProf($id) {
 
-		$update_employeeid = Input::get('employee_id');
-		$update_lastname = Input::get('lastname');
-		$update_firstname = Input::get('firstname');
-		$update_mi = Input::get('mi');
-		$update_birthday = Input::get('birthday');
-		$update_contact = Input::get('contact');
-		$update_email = Input::get('email');
-		$update_address = Input::get('address');
+		$update_employeeid = Xss::clean(Input::get('employee_id'));
+		$update_lastname = Xss::clean(Input::get('lastname'));
+		$update_firstname = Xss::clean(Input::get('firstname'));
+		$update_mi = Xss::clean(Input::get('mi'));
+		$update_birthday = Xss::clean(Input::get('birthday'));
+		$update_contact = Xss::clean(Input::get('contact'));
+		$update_email = Xss::clean(Input::get('email'));
+		$update_address = Xss::clean(Input::get('address'));
 
 		$update_prof = Professor::find($id);
 		$update_prof->employee_id = $update_employeeid;
@@ -171,14 +171,14 @@ public function __construct() {
 
  	public function updateAdmin($id) {
 
-		$update_employeeid = Input::get('employee_id');
-		$update_lastname = Input::get('lastname');
-		$update_firstname = Input::get('firstname');
-		$update_mi = Input::get('mi');
-		$update_birthday = Input::get('birthday');
-		$update_contact = Input::get('contact');
-		$update_email = Input::get('email');
-		$update_address = Input::get('address');
+		$update_employeeid = Xss::clean(Input::get('employee_id'));
+		$update_lastname = Xss::clean(Input::get('lastname'));
+		$update_firstname = Xss::clean(Input::get('firstname'));
+		$update_mi = Xss::clean(Input::get('mi'));
+		$update_birthday = Xss::clean(Input::get('birthday'));
+		$update_contact = Xss::clean(Input::get('contact'));
+		$update_email = Xss::clean(Input::get('email'));
+		$update_address = Xss::clean(Input::get('address'));
 
 		$update_admin = Admin::find($id);
 		$update_admin->employee_id = $update_employeeid;
@@ -196,15 +196,15 @@ public function __construct() {
 
  	public function updateStudent($id) {
 
-		$update_studentid = Input::get('student_id');
-		$update_lastname = Input::get('lastname');
-		$update_firstname = Input::get('firstname');
-		$update_mi = Input::get('mi');
-		$update_birthday = Input::get('birthday');
-		$update_contact = Input::get('contact');
-		$update_course = Input::get('course');
-		$update_yrsection = Input::get('yrsection');
-		$update_address = Input::get('address');
+		$update_studentid = Xss::clean(Input::get('student_id'));
+		$update_lastname = Xss::clean(Input::get('lastname'));
+		$update_firstname = Xss::clean(Input::get('firstname'));
+		$update_mi = Xss::clean(Input::get('mi'));
+		$update_birthday = Xss::clean(Input::get('birthday'));
+		$update_contact = Xss::clean(Input::get('contact'));
+		$update_course = Xss::clean(Input::get('course'));
+		$update_yrsection = Xss::clean(Input::get('yrsection'));
+		$update_address = Xss::clean(Input::get('address'));
 
 		$update_stud = Student::find($id);
 		$update_stud->student_id = $update_studentid;
@@ -222,8 +222,8 @@ public function __construct() {
 
 	public function postSearch() {
 		
-		$keyword = Input::get('keyword');
-		$filter = Input::get('filter_by');
+		$keyword = Xss::clean(Input::get('keyword'));
+		$filter = Xss::clean(Input::get('filter_by'));
 
 		if(empty($keyword)) {
 			return Redirect::route('asearch');
@@ -351,18 +351,18 @@ public function __construct() {
 	public function postAddCourse() {
 
 		$course = [
-			'code'			=> Input::get('code'),
-			'college_code'	=> Input::get('college_code'),
-			'description'	=> Input::get('description')
+			'code'			=> Xss::clean(Input::get('code')),
+			'college_code'	=> Xss::clean(Input::get('college_code')),
+			'description'	=> Xss::clean(Input::get('description'))
 		];
 
 		$validation = Course::validate($course);
 
 		if($validation->passes()) {
 			Course::firstOrCreate([
-			'code'			=> Input::get('code'),
-			'college_code'	=> Input::get('college_code'),
-			'description'	=> Input::get('description')
+			'code'			=> Xss::clean(Input::get('code')),
+			'college_code'	=> Xss::clean(Input::get('college_code')),
+			'description'	=> Xss::clean(Input::get('description'))
 		]);
 			return Redirect::back()
 				->with('message', 'New course added');
@@ -375,16 +375,16 @@ public function __construct() {
 	public function postAddSubject() {
 
 		$subject = [
-			'code'			=> Input::get('add_code'),
-			'description'	=> Input::get('add_description')
+			'code'			=> Xss::clean(Input::get('add_code')),
+			'description'	=> Xss::clean(Input::get('add_description'))
 		];
 
 		$validation = Subject::validate($subject);
 
 		if($validation->passes()) {
 			Subject::create([
-			'code'			=> Input::get('add_code'),
-			'description'	=> Input::get('add_description')
+			'code'			=> Xss::clean(Input::get('add_code')),
+			'description'	=> Xss::clean(Input::get('add_description'))
 		]);
 			return Redirect::back()
 				->with('message', 'New subject added');
@@ -397,14 +397,14 @@ public function __construct() {
 	public function postAddRoom() {
 
 		$room = [
-			'room'			=> Input::get('addroom'),
+			'room'			=> Xss::clean(Input::get('addroom')),
 		];
 
 		$validation = Room::validate($room);
 
 		if($validation->passes()) {
 			Room::create([
-				'room'		=> Input::get('addroom')
+				'room'		=> Xss::clean(Input::get('addroom'))
 		]);
 			return Redirect::back()
 				->with('message', 'New room added');
@@ -417,14 +417,14 @@ public function __construct() {
 	public function postAddYrSection() {
 
 		$yrsection = [
-			'yrsection'		=> Input::get('addyrsection')		
+			'yrsection'		=> Xss::clean(Input::get('addyrsection'))		
 		];
 
 		$validation = Yrsection::validate($yrsection);
 
 		if($validation->passes()) {
 			Yrsection::create([
-				'yrsection'		=> Input::get('addyrsection')	
+				'yrsection'		=> Xss::clean(Input::get('addyrsection'))	
 		]);
 			return Redirect::back()
 				->with('message', 'New Yr/Section added');
@@ -440,10 +440,10 @@ public function __construct() {
 	public function postAddUser() {
 
 		$user = [
-			'employee_id'			=> Input::get('employee_id'),
-			'username'				=> Input::get('username'),
-			'password'				=> Input::get('password'),
-			'password_confirmation' => Input::get('password_confirmation')
+			'employee_id'			=> Xss::clean(Input::get('employee_id')),
+			'username'				=> Xss::clean(Input::get('username')),
+			'password'				=> Xss::clean(Input::get('password')),
+			'password_confirmation' => Xss::clean(Input::get('password_confirmation'))
 		];
 
 		$rules = [
@@ -457,12 +457,12 @@ public function __construct() {
 
 		if($validation->passes()) {
 
-			$addtoadmin = Admin::where('employee_id', '=', Input::get('employee_id'))->first();
+			$addtoadmin = Admin::where('employee_id', '=', Xss::clean(Input::get('employee_id')))->first();
 
 			$createadmin = [
-			'employee_id'	=> Input::get('employee_id'),
-			'username'		=> Input::get('username'),
-			'password'		=> Hash::make(Input::get('password')),
+			'employee_id'	=> Xss::clean(Input::get('employee_id')),
+			'username'		=> Xss::clean(Input::get('username')),
+			'password'		=> Hash::make(Xss::clean(Input::get('password'))),
 			'type'			=> ($addtoadmin) ? '1' : '2',
 			];
 
@@ -484,15 +484,15 @@ public function __construct() {
 	public function postAddStudents() {
 
 		$student = [
-			'student_id'		=> Input::get('student_id'),
-			'lastname'			=> Input::get('lastname'),
-			'firstname'			=> Input::get('firstname'),
-			'middlename' 		=> Input::get('middlename'),
-			'contact'			=> Input::get('contact'),
-			'birthday'			=> Input::get('birthday'),
-			'address' 			=> Input::get('address'),
-			'course' 			=> Input::get('course'),
-			'yrsection' 		=> Input::get('yrsection')
+			'student_id'		=> Xss::clean(Input::get('student_id')),
+			'lastname'			=> Xss::clean(Input::get('lastname')),
+			'firstname'			=> Xss::clean(Input::get('firstname')),
+			'middlename' 		=> Xss::clean(Input::get('middlename')),
+			'contact'			=> Xss::clean(Input::get('contact')),
+			'birthday'			=> Xss::clean(Input::get('birthday')),
+			'address' 			=> Xss::clean(Input::get('address')),
+			'course' 			=> Xss::clean(Input::get('course')),
+			'yrsection' 		=> Xss::clean(Input::get('yrsection'))
 		];
 
 		
@@ -511,14 +511,14 @@ public function __construct() {
 
 	private function adminProfInput() {
 		$get_admin_prof_input = [
-			'employee_id'		=> Input::get('employee_id'),
-			'lastname'			=> Input::get('lastname'),
-			'firstname'			=> Input::get('firstname'),
-			'middlename' 		=> Input::get('middlename'),
-			'contact'			=> Input::get('contact'),
-			'email'				=> Input::get('email'),
-			'birthday'			=> Input::get('birthday'),
-			'address' 			=> Input::get('address'),
+			'employee_id'		=> Xss::clean(Input::get('employee_id')),
+			'lastname'			=> Xss::clean(Input::get('lastname')),
+			'firstname'			=> Xss::clean(Input::get('firstname')),
+			'middlename' 		=> Xss::clean(Input::get('middlename')),
+			'contact'			=> Xss::clean(Input::get('contact')),
+			'email'				=> Xss::clean(Input::get('email')),
+			'birthday'			=> Xss::clean(Input::get('birthday')),
+			'address' 			=> Xss::clean(Input::get('address')),
 		];
 		return $get_admin_prof_input;
 	}
@@ -556,12 +556,12 @@ public function __construct() {
 	public function postAddProfessorsTasks($id) {
 
 		$tasks = [
-			'course_id' 	=> Input::get('course'),
-			'yrsection_id' 	=> Input::get('yrsection'),
-			'subject_id' 	=> Input::get('subject'),
-			'room_id' 		=> Input::get('room'),
-			'timestarts_at' => Input::get('timestart'),
-			'timeends_at'	=> Input::get('timeends'),
+			'course_id' 	=> Xss::clean(Input::get('course')),
+			'yrsection_id' 	=> Xss::clean(Input::get('yrsection')),
+			'subject_id' 	=> Xss::clean(Input::get('subject')),
+			'room_id' 		=> Xss::clean(Input::get('room')),
+			'timestarts_at' => Xss::clean(Input::get('timestart')),
+			'timeends_at'	=> Xss::clean(Input::get('timeends')),
 		];
 
 		$validation = Profsubject::validate($tasks);
@@ -569,12 +569,12 @@ public function __construct() {
 		if($validation->passes()) {
 			Profsubject::create([
 				'professor_id'  => $id,
-				'course_id'		=> Input::get('course'),
-				'yrsection_id'	=> Input::get('yrsection'),
-				'subject_id'	=> Input::get('subject'),
-				'room_id'		=> Input::get('room'),
-				'timestarts_at' => date('H:i:s',strtotime(Input::get('timestart'))),
-				'timeends_at'	=> date('H:i:s',strtotime(Input::get('timeends')))
+				'course_id'		=> Xss::clean(Input::get('course')),
+				'yrsection_id'	=> Xss::clean(Input::get('yrsection')),
+				'subject_id'	=> Xss::clean(Input::get('subject')),
+				'room_id'		=> Xss::clean(Input::get('room')),
+				'timestarts_at' => date('H:i:s',strtotime(Xss::clean(Input::get('timestart')))),
+				'timeends_at'	=> date('H:i:s',strtotime(Xss::clean(Input::get('timeends'))))
 			]);
 			return Redirect::back()
 				->with('message', 'New task added');
@@ -587,7 +587,7 @@ public function __construct() {
 	public function postAddStudentEnroll($id) {
 
 		$studentenroll = [
-			'profsubjects_id' 	=> Input::get('studentenroll'),
+			'profsubjects_id' 	=> Xss::clean(Input::get('studentenroll')),
 		];
 
 		$validation = Studsubject::validate($studentenroll);
@@ -595,7 +595,7 @@ public function __construct() {
 		if($validation->passes()) {
 			Studsubject::create([
 				'student_id'   		 => $id,
-				'profsubjects_id'	 => Input::get('studentenroll'),
+				'profsubjects_id'	 => Xss::clean(Input::get('studentenroll')),
 			]);
 			return Redirect::back()
 				->with('message', 'New subject enrolled');

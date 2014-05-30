@@ -15,7 +15,7 @@ public function __construct() {
 	}
 
 	public function postEncode() {
-		$yrsection = Input::get('courseyrsection');
+		$yrsection = Xss::clean(Input::get('courseyrsection'));
 
 		return View::make('prof.encode')
 			->with(BaseController::encodeGetYrsecProfsubStudsubGrades($yrsection));
@@ -40,18 +40,18 @@ public function __construct() {
 		//Redirect::action('ProfessorController@getScheds');
 
 		$student_grade = [
-			'studsubjects_id' => Input::get('stdid'),
-			'midterm_grade' => Input::get('midterm'),
-			'final_grade'	=> Input::get('finals'),
-			'semgrade'		=> Input::get('semgrade'),
-			'remarks'		=> Input::get('remarks')
+			'studsubjects_id' => Xss::clean(Input::get('stdid')),
+			'midterm_grade' => Xss::clean(Input::get('midterm')),
+			'final_grade'	=> Xss::clean(Input::get('finals')),
+			'semgrade'		=> Xss::clean(Input::get('semgrade')),
+			'remarks'		=> Xss::clean(Input::get('remarks'))
 		];
 
 		if( Input::get('midterm') != "N/A") {
 			Midtermgrade::create([
 				'profsubjects_id' => $profsubjects_id,
-				'studsubjects_id' => Input::get('stdid'),
-				'grade'			  => Input::get('midterm'),
+				'studsubjects_id' => Xss::clean(Input::get('stdid')),
+				'grade'			  => Xss::clean(Input::get('midterm')),
 				'created_at'  => new DateTime,
 				'updated_at'  => new DateTime
 			]);
@@ -63,8 +63,8 @@ public function __construct() {
 
 			Finalgrade::create([
 				'profsubjects_id' => $profsubjects_id,
-				'studsubjects_id' => Input::get('stdid'),
-				'grade'		      => Input::get('finals'),
+				'studsubjects_id' => Xss::clean(Input::get('stdid')),
+				'grade'		      => Xss::clean(Input::get('finals')),
 				'created_at'  => new DateTime,
 				'updated_at'  => new DateTime
 			]);
@@ -78,12 +78,12 @@ public function __construct() {
 			&& Input::get('remarks') != "N/A" ) {
 
 			Semgrade::create([
-				'studsubjects_id' => Input::get('stdid'),
+				'studsubjects_id' => Xss::clean(Input::get('stdid')),
 				'profsubjects_id' => $profsubjects_id,			
-				'midtermgrades' => Input::get('midterm'),
-				'finalgrades'   => Input::get('finals'),
-				'semgrade'		=> Input::get('semgrade'),
-				'remarks'		=> Input::get('remarks'),
+				'midtermgrades' => Xss::clean(Input::get('midterm')),
+				'finalgrades'   => Xss::clean(Input::get('finals')),
+				'semgrade'		=> Xss::clean(Input::get('semgrade'),
+				'remarks'		=> Xss::clean(Input::get('remarks')),
 				'created_at'  => new DateTime,
 				'updated_at'  => new DateTime
 			]);

@@ -57,7 +57,7 @@
 	            		{{ Form::text('course_description', $course->description, ['class' => 'form-control course-description'] ) }} 
 	            		</td>
 	            		<td>
-	            		<a class="pull-right btn btn-success course-edit" data-code="{{ $course->code }}" data-collegecode="{{ $course->college_code }}" data-description="{{ $course->description }}">Edit</a>
+	            		<a class="pull-right btn btn-success course-edit" data-code="{{{ $course->code }}}" data-collegecode="{{{ $course->college_code }}}" data-description="{{{ $course->description }}}">Edit</a>
 	            		{{ Form::submit('Save', ['class' => 'pull-right btn btn-success course-save', 'onclick'=>'return confirm("Continue to save?")']) }}
 	            		{{ Form::close() }}
 	            		{{ Form::open(['method'=> 'DELETE','route'=>['deletecourse', $course->id]]) }}
