@@ -18,7 +18,13 @@
 					<strong>Employee ID: </strong>
 					<span>{{{ $professor->employee_id }}}
 					</span>
-					{{ Form::text('employee_id', $professor->employee_id, ['class' => 'form-control proftask-employeeid'] ) }}   
+
+					@if($admin->employee_id != '1234567' || $admin->employee_id != '123456789')
+					{{ Form::text('employee_id', $professor->employee_id, ['class' => 'form-control proftask-employeeid'] ) }}
+					@else
+					{{ Form::text('employee_id', $professor->employee_id, ['class' => 'form-control proftask-employeeid'] ) }}
+					@endif
+
 					<br />
 					<strong>Lastname: </strong>
 					<span>{{{ $professor->lastname }}}

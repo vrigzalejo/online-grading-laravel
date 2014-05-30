@@ -17,7 +17,13 @@
 					{{ Form::open(['method'=> 'PUT','route'=>['updateadmin', $admin->id]]) }}
 					
 					<strong>Employee ID: </strong><span>{{{ $admin->employee_id }}}</span>
-					{{ Form::text('employee_id', $admin->employee_id, ['class' => 'form-control admin-employeeid'] ) }}   
+
+					@if($admin->employee_id != '1234567' || $admin->employee_id != '123456789')
+					{{ Form::text('employee_id', $admin->employee_id, ['class' => 'form-control admin-employeeid'] ) }}
+					@else
+					{{ Form::text('employee_id', $admin->employee_id, ['class' => 'form-control admin-employeeid', 'disabled'] ) }}
+					@endif
+
 					<br />
 					<strong>Lastname: </strong><span>{{{ $admin->lastname }}}</span>
 					{{ Form::text('lastname', $admin->lastname, ['class' => 'form-control admin-lastname'] ) }}
