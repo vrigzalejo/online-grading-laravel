@@ -13,7 +13,11 @@ return array(
 	|
 	*/
 
+<<<<<<< HEAD
 	'debug' => false,
+=======
+	'debug' => true,
+>>>>>>> grade/develop
 
 	/*
 	|--------------------------------------------------------------------------
@@ -56,6 +60,7 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
+<<<<<<< HEAD
 	| Application Fallback Locale
 	|--------------------------------------------------------------------------
 	|
@@ -69,6 +74,8 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
+=======
+>>>>>>> grade/develop
 	| Encryption Key
 	|--------------------------------------------------------------------------
 	|
@@ -92,6 +99,11 @@ return array(
 	*/
 
 	'providers' => array(
+<<<<<<< HEAD
+=======
+
+		'Fideloper\Proxy\ProxyServiceProvider',
+>>>>>>> grade/develop
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -118,7 +130,11 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+<<<<<<< HEAD
 		'Twilio\Laratwilio\LaratwilioServiceProvider',
+=======
+
+>>>>>>> grade/develop
 	),
 
 	/*
@@ -184,7 +200,11 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+<<<<<<< HEAD
 		'Sms'			  => 'Twilio\Laratwilio\Facades\Laratwilio',	
+=======
+
+>>>>>>> grade/develop
 	),
 
 );

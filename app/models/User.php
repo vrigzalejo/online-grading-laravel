@@ -12,6 +12,9 @@ class User extends Basemodel implements UserInterface, RemindableInterface {
 			'password'		=> 'required|between:4,32'		
 	];
 
+class User extends Eloquent implements UserInterface, RemindableInterface {
+
+
 	/**
 	 * The database table used by the model.
 	 *
@@ -87,6 +90,7 @@ class User extends Basemodel implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+<<<<<<< HEAD
 
 	public function admin() {
 		return $this->belongsTo('Admin');
@@ -104,3 +108,6 @@ class User extends Basemodel implements UserInterface, RemindableInterface {
 	];
 
 }
+=======
+}
+>>>>>>> grade/develop

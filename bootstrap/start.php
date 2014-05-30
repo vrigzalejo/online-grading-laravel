@@ -29,6 +29,9 @@ $env = $app->detectEnvironment(array(
 	'local' => array('localhost'),
 	'production' => array('your-machine-name'),
 
+	'local' => array('your-machine-name'),
+
+
 ));
 
 /*

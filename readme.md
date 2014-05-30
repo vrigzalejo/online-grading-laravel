@@ -16,16 +16,20 @@ You can install the Quickstart either directly from the [Pagoda Box App Cafe](ht
 * Edit `bootstrap/start.php` and add your local machine's hostname to the `local` element in the `detectEnvironment` call parameter array
 * Set your local web server to use the `public` folder as the document root
 
-Last updated: 4/27/2014
 
----
+Last updated: 4/27/2014
+=======
+Last updated: 3/17/2014
 
 ## Laravel PHP Framework
+
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://img.shields.io/packagist/dm/laravel/framework.svg)](https://packagist.org/packages/laravel/framework)
 [![Latest Version](http://img.shields.io/github/tag/laravel/framework.svg)](https://github.com/laravel/framework/releases)
 [![Dependency Status](https://www.versioneye.com/php/laravel:framework/badge.svg)](https://www.versioneye.com/php/laravel:framework)
+[![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework) [![License](https://poser.pugx.org/laravel/framework/license.png)](https://packagist.org/packages/laravel/framework) 
+
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
 

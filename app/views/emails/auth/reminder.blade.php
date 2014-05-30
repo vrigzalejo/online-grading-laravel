@@ -10,4 +10,5 @@
 			To reset your password, complete this form: {{ URL::to('password/reset', array($token)) }}.
 		</div>
 	</body>
+
 </html>

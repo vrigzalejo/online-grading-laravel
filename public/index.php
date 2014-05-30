@@ -42,7 +42,11 @@ $app = require_once __DIR__.'/../bootstrap/start.php';
 | Once we have the application, we can simply call the run method,
 | which will execute the request and send the response back to
 | the client's browser allowing them to enjoy the creative
+<<<<<<< HEAD
 | and wonderful applications we have created for them.
+=======
+| and wonderful application we have whipped up for them.
+>>>>>>> grade/develop
 |
 */
 

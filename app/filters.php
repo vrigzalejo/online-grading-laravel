@@ -35,8 +35,12 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
+
 	//if (Auth::guest()) return Redirect::guest('login');
 	if (Auth::guest()) return Redirect::guest('/');
+
+	if (Auth::guest()) return Redirect::guest('login');
+
 });
 
 
@@ -78,5 +82,9 @@ Route::filter('csrf', function()
 	{
 		throw new Illuminate\Session\TokenMismatchException;
 	}
+<<<<<<< HEAD
 });
 
+=======
+});
+>>>>>>> grade/develop

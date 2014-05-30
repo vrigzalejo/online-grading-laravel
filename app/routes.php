@@ -1,7 +1,5 @@
 <?php
 
-
-
 Route::get('/',					['as' => 'login', 'uses' => 'UserController@getLogin']);
 Route::post('/admin', 			['as' => 'asignin', 'uses' => 'UserController@postLogin']); 
 
@@ -104,4 +102,3 @@ Route::group(['before' => 'auth'], function() {
 	Route::get('/logout',			['as'=>'logout','uses'=>'UserController@getLogout']);
 
 });
-
