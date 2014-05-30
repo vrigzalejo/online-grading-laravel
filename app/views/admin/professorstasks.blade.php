@@ -179,27 +179,7 @@
 {{ HTML::script('/js/jquery.min.js') }}
 {{ HTML::script('/js/bootstrap-timepicker.min.js') }}
 <script type="text/javascript">
-jQuery(document).ready(function() {
-	jQuery('.proftask-save, .proftask-employeeid, .proftask-lastname, .proftask-firstname, .proftask-middlename, .proftask-birthday, .proftask-contact, .proftask-email, .proftask-address').hide();
-	jQuery('.proftask-edit').click(function() {
-		jQuery(this).hide();
-		jQuery(this).parents('.prof-profile').find('span').hide();
-		jQuery(this).parents('.prof-profile').find('input[type="text"]').show();
-		jQuery(this).parents('.prof-profile').find('.proftask-save').show();
-	
-		jQuery(this).parents('.prof-profile').find('.proftask-employeeid').val(jQuery(this).attr('data-employeeid'));
-		jQuery(this).parents('.prof-profile').find('.proftask-lastname').val(jQuery(this).attr('data-lastname'));
-		jQuery(this).parents('.prof-profile').find('.proftask-firstname').val(jQuery(this).attr('data-firstname'));
-		jQuery(this).parents('.prof-profile').find('.proftask-middlename').val(jQuery(this).attr('data-middlename'));
-		jQuery(this).parents('.prof-profile').find('.proftask-birthday').val(jQuery(this).attr('data-birthday'));
-		jQuery(this).parents('.prof-profile').find('.proftask-contact').val(jQuery(this).attr('data-contact'));
-		jQuery(this).parents('.prof-profile').find('.proftask-email').val(jQuery(this).attr('data-email'));
-		jQuery(this).parents('.prof-profile').find('.proftask-address').val(jQuery(this).attr('data-address'));
-	});
-});
-
-    $('#timepicker1').timepicker();
-    $('#timepicker2').timepicker();
+jQuery(document).ready(function(){jQuery(".proftask-save, .proftask-employeeid, .proftask-lastname, .proftask-firstname, .proftask-middlename, .proftask-birthday, .proftask-contact, .proftask-email, .proftask-address").hide();jQuery(".proftask-edit").click(function(){jQuery(this).hide();jQuery(this).parents(".prof-profile").find("span").hide();jQuery(this).parents(".prof-profile").find('input[type="text"]').show();jQuery(this).parents(".prof-profile").find(".proftask-save").show();jQuery(this).parents(".prof-profile").find(".proftask-employeeid").val(jQuery(this).attr("data-employeeid"));jQuery(this).parents(".prof-profile").find(".proftask-lastname").val(jQuery(this).attr("data-lastname"));jQuery(this).parents(".prof-profile").find(".proftask-firstname").val(jQuery(this).attr("data-firstname"));jQuery(this).parents(".prof-profile").find(".proftask-middlename").val(jQuery(this).attr("data-middlename"));jQuery(this).parents(".prof-profile").find(".proftask-birthday").val(jQuery(this).attr("data-birthday"));jQuery(this).parents(".prof-profile").find(".proftask-contact").val(jQuery(this).attr("data-contact"));jQuery(this).parents(".prof-profile").find(".proftask-email").val(jQuery(this).attr("data-email"));jQuery(this).parents(".prof-profile").find(".proftask-address").val(jQuery(this).attr("data-address"))})});$("#timepicker1").timepicker();$("#timepicker2").timepicker();
 </script>
 
 @stop

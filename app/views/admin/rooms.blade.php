@@ -73,30 +73,6 @@
 @section('scripts')
 {{ HTML::script('/js/jquery.min.js')}}
 <script type="text/javascript">
-jQuery(document).ready(function() {
-	jQuery('.room-save').hide();
-	jQuery('.room-room').hide();
-	jQuery('.room-edit').click(function() {
-		jQuery(this).hide();
-		jQuery(this).parents('tr').find('span').hide();
-		jQuery(this).parents('tr').find('input[type="text"]').show();
-		jQuery(this).parents('tr').find('.room-save').show();
-	
-		// values
-		jQuery(this).parents('tr').find('.room-room').val(jQuery(this).attr('data-room'));
-	});
-
-	jQuery('#show-create-form').click(function() {
-		jQuery('#create-room-form').toggle();
-		jQuery('#show-create-form').toggle();
-		jQuery('#hide-create-form').toggle();
-	});
-	jQuery('#hide-create-form').click(function() {
-		jQuery('#create-room-form').toggle();
-		jQuery('#show-create-form').toggle();
-		jQuery('#hide-create-form').toggle();
-	});
-});
-
+jQuery(document).ready(function(){jQuery(".room-save").hide();jQuery(".room-room").hide();jQuery(".room-edit").click(function(){jQuery(this).hide();jQuery(this).parents("tr").find("span").hide();jQuery(this).parents("tr").find('input[type="text"]').show();jQuery(this).parents("tr").find(".room-save").show();jQuery(this).parents("tr").find(".room-room").val(jQuery(this).attr("data-room"))});jQuery("#show-create-form").click(function(){jQuery("#create-room-form").toggle();jQuery("#show-create-form").toggle();jQuery("#hide-create-form").toggle()});jQuery("#hide-create-form").click(function(){jQuery("#create-room-form").toggle();jQuery("#show-create-form").toggle();jQuery("#hide-create-form").toggle()})});
 </script>
 @stop

@@ -89,19 +89,7 @@
 {{ HTML::script('/js/jquery.min.js')}}
 {{ HTML::script('/js/bootstrap-select.min.js')}}
 <script type="text/javascript">
-jQuery(document).ready(function() {
-	jQuery('#show-create-form').click(function() {
-		jQuery('#create-user-form').toggle();
-		jQuery('#show-create-form').toggle();
-		jQuery('#hide-create-form').toggle();
-	});
-	jQuery('#hide-create-form').click(function() {
-		jQuery('#create-user-form').toggle();
-		jQuery('#show-create-form').toggle();
-		jQuery('#hide-create-form').toggle();
-	});
-});
-$('select').selectpicker();
+jQuery(document).ready(function(){jQuery("#show-create-form").click(function(){jQuery("#create-user-form").toggle();jQuery("#show-create-form").toggle();jQuery("#hide-create-form").toggle()});jQuery("#hide-create-form").click(function(){jQuery("#create-user-form").toggle();jQuery("#show-create-form").toggle();jQuery("#hide-create-form").toggle()})});$("select").selectpicker();
 </script>
 
 @stop

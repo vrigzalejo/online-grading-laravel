@@ -81,31 +81,7 @@
 @section('scripts')
 {{ HTML::script('/js/jquery.min.js')}}
 <script type="text/javascript">
-jQuery(document).ready(function() {
-	jQuery('.subject-save').hide();
-	jQuery('.subject-code, .subject-description').hide();
-	jQuery('.subject-edit').click(function() {
-		jQuery(this).hide();
-		jQuery(this).parents('tr').find('span').hide();
-		jQuery(this).parents('tr').find('input[type="text"]').show();
-		jQuery(this).parents('tr').find('.subject-save').show();
-	
-		// values
-		jQuery(this).parents('tr').find('.subject-code').val(jQuery(this).attr('data-code'));
-		jQuery(this).parents('tr').find('.subject-description').val(jQuery(this).attr('data-description'));
-	});
-
-	jQuery('#show-create-form').click(function() {
-		jQuery('#create-subject-form').toggle();
-		jQuery('#show-create-form').toggle();
-		jQuery('#hide-create-form').toggle();
-	});
-	jQuery('#hide-create-form').click(function() {
-		jQuery('#create-subject-form').toggle();
-		jQuery('#show-create-form').toggle();
-		jQuery('#hide-create-form').toggle();
-	});
-});
-
+jQuery(document).ready(function(){jQuery(".subject-save").hide();jQuery(".subject-code, .subject-description").hide();jQuery(".subject-edit").click(function(){jQuery(this).hide();jQuery(this).parents("tr").find("span").hide();jQuery(this).parents("tr").find('input[type="text"]').show();jQuery(this).parents("tr").find(".subject-save").show();jQuery(this).parents("tr").find(".subject-code").val(jQuery(this).attr("data-code"));jQuery(this).parents("tr").find(".subject-description").val(jQuery(this).attr("data-description"))});
+jQuery("#show-create-form").click(function(){jQuery("#create-subject-form").toggle();jQuery("#show-create-form").toggle();jQuery("#hide-create-form").toggle()});jQuery("#hide-create-form").click(function(){jQuery("#create-subject-form").toggle();jQuery("#show-create-form").toggle();jQuery("#hide-create-form").toggle()})});
 </script>
 @stop

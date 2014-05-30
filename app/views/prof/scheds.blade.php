@@ -75,7 +75,6 @@
 {{ HTML::script('/js/print.min.js')}}
 {{ Html::script('/js/bootstrap-timepicker.min.js') }}
 <script type="text/javascript">
-    $('#timepicker1').timepicker();
-    $('#timepicker2').timepicker();
+$('#timepicker1').timepicker();$('#timepicker2').timepicker();
 </script>
 @stop

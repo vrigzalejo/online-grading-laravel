@@ -83,31 +83,7 @@
 @section('scripts')
 {{ HTML::script('/js/jquery.min.js')}}
 <script type="text/javascript">
-jQuery(document).ready(function() {
-	jQuery('.course-save, .course-code, .course-collegecode, .course-description').hide();
-	jQuery('.course-edit').click(function() {
-		jQuery(this).hide();
-		jQuery(this).parents('tr').find('span').hide();
-		jQuery(this).parents('tr').find('input[type="text"]').show();
-		jQuery(this).parents('tr').find('.course-save').show();
-	
-		// values
-		jQuery(this).parents('tr').find('.course-code').val(jQuery(this).attr('data-code'));
-		jQuery(this).parents('tr').find('.course-collegecode').val(jQuery(this).attr('data-collegecode'));
-		jQuery(this).parents('tr').find('.course-description').val(jQuery(this).attr('data-description'));
-	});
-
-	jQuery('#show-create-form').click(function() {
-		jQuery('#create-course-form').toggle();
-		jQuery('#show-create-form').toggle();
-		jQuery('#hide-create-form').toggle();
-	});
-	jQuery('#hide-create-form').click(function() {
-		jQuery('#create-course-form').toggle();
-		jQuery('#show-create-form').toggle();
-		jQuery('#hide-create-form').toggle();
-	});
-});
+jQuery(document).ready(function(){jQuery(".course-save, .course-code, .course-collegecode, .course-description").hide();jQuery(".course-edit").click(function(){jQuery(this).hide();jQuery(this).parents("tr").find("span").hide();jQuery(this).parents("tr").find('input[type="text"]').show();jQuery(this).parents("tr").find(".course-save").show();jQuery(this).parents("tr").find(".course-code").val(jQuery(this).attr("data-code"));jQuery(this).parents("tr").find(".course-collegecode").val(jQuery(this).attr("data-collegecode"));jQuery(this).parents("tr").find(".course-description").val(jQuery(this).attr("data-description"))});jQuery("#show-create-form").click(function(){jQuery("#create-course-form").toggle();jQuery("#show-create-form").toggle();jQuery("#hide-create-form").toggle()});jQuery("#hide-create-form").click(function(){jQuery("#create-course-form").toggle();jQuery("#show-create-form").toggle();jQuery("#hide-create-form").toggle()})});
 
 </script>
 @stop

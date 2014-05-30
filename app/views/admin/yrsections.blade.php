@@ -72,30 +72,7 @@
 @section('scripts')
 {{ HTML::script('/js/jquery.min.js')}}
 <script type="text/javascript">
-jQuery(document).ready(function() {
-	jQuery('.yrsection-save').hide();
-	jQuery('.yrsection-yrsection').hide();
-	jQuery('.yrsection-edit').click(function() {
-		jQuery(this).hide();
-		jQuery(this).parents('tr').find('span').hide();
-		jQuery(this).parents('tr').find('input[type="text"]').show();
-		jQuery(this).parents('tr').find('.yrsection-save').show();
-	
-		// values
-		jQuery(this).parents('tr').find('.yrsection-yrsection').val(jQuery(this).attr('data-yrsection'));
-	});
-
-	jQuery('#show-create-form').click(function() {
-		jQuery('#create-yrsection-form').toggle();
-		jQuery('#show-create-form').toggle();
-		jQuery('#hide-create-form').toggle();
-	});
-	jQuery('#hide-create-form').click(function() {
-		jQuery('#create-yrsection-form').toggle();
-		jQuery('#show-create-form').toggle();
-		jQuery('#hide-create-form').toggle();
-	});
-});
-
+jQuery(document).ready(function(){jQuery(".yrsection-save").hide();jQuery(".yrsection-yrsection").hide();jQuery(".yrsection-edit").click(function(){jQuery(this).hide();jQuery(this).parents("tr").find("span").hide();jQuery(this).parents("tr").find('input[type="text"]').show();jQuery(this).parents("tr").find(".yrsection-save").show();jQuery(this).parents("tr").find(".yrsection-yrsection").val(jQuery(this).attr("data-yrsection"))});jQuery("#show-create-form").click(function(){jQuery("#create-yrsection-form").toggle();
+jQuery("#show-create-form").toggle();jQuery("#hide-create-form").toggle()});jQuery("#hide-create-form").click(function(){jQuery("#create-yrsection-form").toggle();jQuery("#show-create-form").toggle();jQuery("#hide-create-form").toggle()})});
 </script>
 @stop

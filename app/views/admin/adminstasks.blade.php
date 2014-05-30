@@ -69,27 +69,7 @@
 {{ HTML::script('/js/jquery.min.js') }}
 {{ HTML::script('/js/bootstrap-timepicker.min.js') }}
 <script type="text/javascript">
-jQuery(document).ready(function() {
-	jQuery('.admin-save, .admin-employeeid, .admin-lastname, .admin-firstname, .admin-middlename, .admin-birthday, .admin-contact, .admin-email, .admin-address').hide();
-	jQuery('.admin-edit').click(function() {
-		jQuery(this).hide();
-		jQuery(this).parents('.admin-profile').find('span').hide();
-		jQuery(this).parents('.admin-profile').find('input[type="text"]').show();
-		jQuery(this).parents('.admin-profile').find('.admin-save').show();
-	
-		jQuery(this).parents('.admin-profile').find('.admin-employeeid').val(jQuery(this).attr('data-employeeid'));
-		jQuery(this).parents('.admin-profile').find('.admin-lastname').val(jQuery(this).attr('data-lastname'));
-		jQuery(this).parents('.admin-profile').find('.admin-firstname').val(jQuery(this).attr('data-firstname'));
-		jQuery(this).parents('.admin-profile').find('.admin-middlename').val(jQuery(this).attr('data-middlename'));
-		jQuery(this).parents('.admin-profile').find('.admin-birthday').val(jQuery(this).attr('data-birthday'));
-		jQuery(this).parents('.admin-profile').find('.admin-contact').val(jQuery(this).attr('data-contact'));
-		jQuery(this).parents('.admin-profile').find('.admin-email').val(jQuery(this).attr('data-email'));
-		jQuery(this).parents('.admin-profile').find('.admin-address').val(jQuery(this).attr('data-address'));
-	});
-});
-
-    $('#timepicker1').timepicker();
-    $('#timepicker2').timepicker();
+jQuery(document).ready(function(){jQuery(".admin-save, .admin-employeeid, .admin-lastname, .admin-firstname, .admin-middlename, .admin-birthday, .admin-contact, .admin-email, .admin-address").hide();jQuery(".admin-edit").click(function(){jQuery(this).hide();jQuery(this).parents(".admin-profile").find("span").hide();jQuery(this).parents(".admin-profile").find('input[type="text"]').show();jQuery(this).parents(".admin-profile").find(".admin-save").show();jQuery(this).parents(".admin-profile").find(".admin-employeeid").val(jQuery(this).attr("data-employeeid"));jQuery(this).parents(".admin-profile").find(".admin-lastname").val(jQuery(this).attr("data-lastname"));jQuery(this).parents(".admin-profile").find(".admin-firstname").val(jQuery(this).attr("data-firstname"));jQuery(this).parents(".admin-profile").find(".admin-middlename").val(jQuery(this).attr("data-middlename"));jQuery(this).parents(".admin-profile").find(".admin-birthday").val(jQuery(this).attr("data-birthday"));jQuery(this).parents(".admin-profile").find(".admin-contact").val(jQuery(this).attr("data-contact"));jQuery(this).parents(".admin-profile").find(".admin-email").val(jQuery(this).attr("data-email"));jQuery(this).parents(".admin-profile").find(".admin-address").val(jQuery(this).attr("data-address"))})});$("#timepicker1").timepicker();$("#timepicker2").timepicker();
 </script>
 
 @stop

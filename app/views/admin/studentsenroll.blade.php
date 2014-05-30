@@ -122,28 +122,9 @@
 {{ HTML::script('/js/jquery.min.js') }}
 {{ HTML::script('/js/bootstrap-timepicker.min.js') }}
 <script type="text/javascript">
-jQuery(document).ready(function() {
-	jQuery('.studenroll-save, .studenroll-studentid, .studenroll-lastname, .studenroll-firstname, .studenroll-middlename, .studenroll-birthday, .studenroll-contact, .studenroll-email, .studenroll-address, .studenroll-course, .studenroll-yrsection').hide();
-	jQuery('.studenroll-edit').click(function() {
-		jQuery(this).hide();
-		jQuery(this).parents('.stud-profile').find('span').hide();
-		jQuery(this).parents('.stud-profile').find('input[type="text"], select').show();
-		jQuery(this).parents('.stud-profile').find('.studenroll-save').show();
-	
-		jQuery(this).parents('.stud-profile').find('.studenroll-studentid').val(jQuery(this).attr('data-studentid'));
-		jQuery(this).parents('.stud-profile').find('.studenroll-lastname').val(jQuery(this).attr('data-lastname'));
-		jQuery(this).parents('.stud-profile').find('.studenroll-firstname').val(jQuery(this).attr('data-firstname'));
-		jQuery(this).parents('.stud-profile').find('.studenroll-middlename').val(jQuery(this).attr('data-middlename'));
-		jQuery(this).parents('.stud-profile').find('.studenroll-birthday').val(jQuery(this).attr('data-birthday'));
-		jQuery(this).parents('.stud-profile').find('.studenroll-contact').val(jQuery(this).attr('data-contact'));
-		jQuery(this).parents('.stud-profile').find('.studenroll-course').val(jQuery(this).attr('data-course'));
-		jQuery(this).parents('.stud-profile').find('.studenroll-yrsection').val(jQuery(this).attr('data-yrsection'));
-		jQuery(this).parents('.stud-profile').find('.studenroll-address').val(jQuery(this).attr('data-address'));
-	});
-});
-
-    $('#timepicker1').timepicker();
-    $('#timepicker2').timepicker();
+jQuery(document).ready(function(){jQuery(".studenroll-save, .studenroll-studentid, .studenroll-lastname, .studenroll-firstname, .studenroll-middlename, .studenroll-birthday, .studenroll-contact, .studenroll-email, .studenroll-address, .studenroll-course, .studenroll-yrsection").hide();jQuery(".studenroll-edit").click(function(){jQuery(this).hide();jQuery(this).parents(".stud-profile").find("span").hide();jQuery(this).parents(".stud-profile").find('input[type="text"], select').show();jQuery(this).parents(".stud-profile").find(".studenroll-save").show();
+jQuery(this).parents(".stud-profile").find(".studenroll-studentid").val(jQuery(this).attr("data-studentid"));jQuery(this).parents(".stud-profile").find(".studenroll-lastname").val(jQuery(this).attr("data-lastname"));jQuery(this).parents(".stud-profile").find(".studenroll-firstname").val(jQuery(this).attr("data-firstname"));jQuery(this).parents(".stud-profile").find(".studenroll-middlename").val(jQuery(this).attr("data-middlename"));jQuery(this).parents(".stud-profile").find(".studenroll-birthday").val(jQuery(this).attr("data-birthday"));
+jQuery(this).parents(".stud-profile").find(".studenroll-contact").val(jQuery(this).attr("data-contact"));jQuery(this).parents(".stud-profile").find(".studenroll-course").val(jQuery(this).attr("data-course"));jQuery(this).parents(".stud-profile").find(".studenroll-yrsection").val(jQuery(this).attr("data-yrsection"));jQuery(this).parents(".stud-profile").find(".studenroll-address").val(jQuery(this).attr("data-address"))})});$("#timepicker1").timepicker();$("#timepicker2").timepicker();
 </script>
 
 @stop
