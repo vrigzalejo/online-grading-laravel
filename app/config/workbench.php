@@ -28,8 +28,4 @@ return array(
 
 	'email' => '',
 
-<<<<<<< HEAD
 );
-=======
-);
->>>>>>> grade/develop
