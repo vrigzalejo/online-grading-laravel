@@ -86,8 +86,8 @@ class UserController extends BaseController {
 	}
 
 	public function getLogout() {			
-			Session::flush();
 			Auth::logout();
+			Session::flush();
 			return Redirect::route('login')
 				->with('message', 'You are now logged out.');
 	}
