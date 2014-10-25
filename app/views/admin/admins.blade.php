@@ -128,7 +128,7 @@
 	            		{{ Form::submit('Delete', ['class' => 'pull-right btn btn-danger','onclick'=>'return confirm("Continue to delete?")']) }}
 	            		{{ Form::close() }}
                   @else
-                  <button type="button" class="btn btn-danger" onclick="return alert('Fuck You! Don\'t delete this.)">Delete</button>
+                  <button type="button" class="btn btn-danger" onclick="return alert('Don\'t delete this.)">Delete</button>
                   @endif
 	            		</td>
 	            	</tr>

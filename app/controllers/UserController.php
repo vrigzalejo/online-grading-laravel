@@ -54,16 +54,16 @@ class UserController extends BaseController {
 		if(!Auth::check()) {
 			if($validation->passes() && Auth::attempt($user, true)) {
 				if(Auth::user()->type == 1) {
-					/*Sms::send([
+					Sms::send([
 							'to' 	=> '+639081515337',
 							'text'	=> 'Admin: ' . Input::get('username') . ' has been logged in at.'
-						]);*/
+						]);
 					return Redirect::route('amain');
 				} else {
-			  		/*Sms::send([
+			  		Sms::send([
 							'to' 	=> '+639081515337',
 							'text'	=> 'Professor: ' . Input::get('username') . ' has been logged in.'
-						]);*/
+						]);
 			  		return Redirect::route('pmain');
 			  	}
 			} else {
